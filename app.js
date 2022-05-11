@@ -1,6 +1,8 @@
 const Koa = require('koa');
 const app = new Koa();
 const KoaRouter = require('koa-router');
+const bodyParser = require('koa-bodyparser');
+
 const PORT = process.env.PORT || 3000;
 
 // logger
@@ -28,7 +30,7 @@ router.get('index', '/', async (ctx) => {
 });
 
 router.post('/webhook', (ctx) => {
-  console.log(`Request Body:\n: ${ctx.request.body}`);
+  console.log(`Request Body:\n ${ctx.request.body}`);
   ctx.status = 200;
 });
 
