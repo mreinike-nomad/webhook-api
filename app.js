@@ -31,7 +31,8 @@ router.get('index', '/', async (ctx) => {
 });
 
 router.post('/webhook', (ctx) => {
-  console.log(`Request Body:\n ${ctx.request.body}`);
+  console.log("Request Body:");
+  console.log(ctx.request.body);
   ctx.status = 200;
 });
 
