@@ -5,8 +5,9 @@ const bodyParser = require('koa-bodyparser');
 
 const PORT = process.env.PORT || 3000;
 
-// logger
+app.use(bodyParser());
 
+// logger
 app.use(async (ctx, next) => {
   await next();
   const rt = ctx.response.get('X-Response-Time');
