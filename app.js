@@ -1,6 +1,7 @@
 const Koa = require('koa');
 const app = new Koa();
 const KoaRouter = require('koa-router');
+const PORT = process.env.PORT || 3000;
 
 // logger
 
@@ -32,4 +33,4 @@ router.post('/webhook', (ctx) => {
 
 app.use(router.routes());
 
-app.listen(3000);
+app.listen(PORT);
