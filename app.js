@@ -38,6 +38,10 @@ router.post('/webhook', (ctx) => {
   ctx.status = 200;
 });
 
+router.head('/pdf', async (ctx) => {
+  ctx.status = 200;
+});
+
 router.get('/pdf', async (ctx) => {
   ctx.redirect('https://nomad-assets-1.s3.amazonaws.com/pdf/boleta_electrnica_t_162511662581218.pdf');
 });
