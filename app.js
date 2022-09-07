@@ -43,7 +43,7 @@ router.head('/pdf', async (ctx) => {
 });
 
 router.get('/pdf', async (ctx) => {
-  ctx.redirect('https://nomad-assets-1.s3.amazonaws.com/pdf/boleta_electrnica_t_162511662581218.pdf');
+  ctx.redirect('https://app2.bsale.cl/view/61263/072071e70569.pdf');
 });
 
 app.use(router.routes());
