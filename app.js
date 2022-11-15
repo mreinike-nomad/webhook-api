@@ -32,9 +32,9 @@ router.get('index', '/', async (ctx) => {
 
 router.post('/webhook', (ctx) => {
   console.log("Request Body:");
-  console.log(ctx.request.body);
+  console.log(JSON.stringify(ctx.request.body, null, 2));
   console.log('Request Headers:');
-  console.log(ctx.request.headers);
+  console.log(JSON.stringify(ctx.request.headers, null, 2));
   ctx.status = 200;
 });
 
